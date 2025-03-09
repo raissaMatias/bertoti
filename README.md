@@ -151,78 +151,37 @@ public class Main {
 ```
 3. Teste TDD
 
-   ```java
+```java
+   import org.junit.jupiter.api.Test;
+   import static org.junit.jupiter.api.Assertions.*;
 
-class ControleDeCaixa {
-    private double saldo;
+class ControleDeCaixaTest {
 
-    public ControleDeCaixa() {
-        this.saldo = 0.0;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public void aumentarSaldo(double valor) {
-        this.saldo += valor;
-    }
-
-    public boolean saidaSaldo(double valor) {
-        if (this.saldo < valor) {
-            System.out.println("Não é possível retirar " + valor + ", pois o saldo é de: " + this.saldo);
-            return false;
-        } else {
-            this.saldo -= valor;
-            return true;
-        }
-    }
-
-    public void exibirSaldo() {
-        System.out.println("Saldo atual: " + this.saldo);
-    }
-}
-
-public class TesteControleDeCaixa {
-    public static boolean testeSaldo() {
+    @Test
+    void testeSaldoInicial() {
         ControleDeCaixa caixaTeste = new ControleDeCaixa();
-        if (caixaTeste.getSaldo() == 0.0) {
-            System.out.println("Saldo passou!");
-            return true;
-        } else {
-            System.out.println("Saldo falhou!");
-            return false;
-        }
+        assertEquals(0.0, caixaTeste.getSaldo(), "O saldo inicial deve ser 0.0");
     }
 
-    public static boolean testeAumentoSaldo() {
+    @Test
+    void testeAumentoSaldo() {
         ControleDeCaixa caixaTeste = new ControleDeCaixa();
         caixaTeste.aumentarSaldo(100.0);
-        if (caixaTeste.getSaldo() == 100.0) {
-            System.out.println("Aumento passou!");
-            return true;
-        } else {
-            System.out.println("Aumento falhou!");
-            return false;
-        }
+        caixaTeste.aumentarSaldo(50.0);
+        assertEquals(150.0, caixaTeste.getSaldo(), "O saldo deve ser 150.0 após os depósitos");
     }
 
-    public static boolean testeExibir() {
+    @Test
+    void testeSaidaSaldo() {
         ControleDeCaixa caixaTeste = new ControleDeCaixa();
-        caixaTeste.exibirSaldo();
-        if (caixaTeste.getSaldo() >= 0.0) {
-            System.out.println("Saldo fechou positivo!");
-            return true;
-        } else {
-            System.out.println("Saldo fechou negativo!");
-            return false;
-        }
-    }
+        caixaTeste.aumentarSaldo(100.0);
 
-    public static void main(String[] args) {
-        testeSaldo();
-        testeAumentoSaldo();
-        testeExibir();
+        boolean primeiraSaida = caixaTeste.saidaSaldo(50.0); // Deve ser true
+        boolean segundaSaida = caixaTeste.saidaSaldo(60.0); // Deve ser false (saldo insuficiente)
+
+        assertTrue(primeiraSaida, "A primeira retirada de 50.0 deve ser bem-sucedida");
+        assertFalse(segundaSaida, "A segunda retirada de 60.0 deve falhar devido ao saldo insuficiente");
+        assertEquals(50.0, caixaTeste.getSaldo(), "O saldo final deve ser 50.0 após a retirada válida");
     }
 }
 ```
