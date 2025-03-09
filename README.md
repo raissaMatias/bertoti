@@ -92,4 +92,137 @@ public class Main {
 }
 ```
 
-2. Código Main 
+2. Código Controle de Caixa
+
+   ```java
+   import java.util.ArrayList;
+   import java.util.List;
+
+   public class ControleDeCaixa {
+    private double saldo;
+    private List<String> registro;
+
+    public ControleDeCaixa() {
+        this.saldo = 0.0;
+        this.registro = new ArrayList<>();
+    }
+
+    public void aumentarSaldo(double valor) {
+        this.saldo += valor;
+        this.registro.add("{tipo: 'entrada', valor: " + valor + "}");
+    }
+
+    public boolean saidaSaldo(double valor) {
+        if (this.saldo < valor) {
+            System.out.println("Não é possível retirar " + valor + ", pois o saldo é de: " + this.saldo);
+            return false;
+        } else {
+            this.saldo -= valor;
+            this.registro.add("{tipo: 'saida', valor: " + valor + "}");
+            return true;
+        }
+    }
+
+    public double exibirSaldo() {
+        System.out.printf("Saldo atual: R$%.2f%n", this.saldo);
+        return this.saldo;
+    }
+
+    public double fecharCaixa() {
+        System.out.println("Fechando caixa!");
+        return this.saldo;
+    }
+
+    public static void main(String[] args) {
+        ControleDeCaixa caixa = new ControleDeCaixa(); //metodo main q cria uma instancia de ControleDeCaixa 
+        
+        caixa.aumentarSaldo(500.0);
+        caixa.exibirSaldo();
+        
+        caixa.saidaSaldo(200.0);
+        caixa.exibirSaldo();
+        
+        caixa.saidaSaldo(400.0);
+        caixa.exibirSaldo();
+        
+        caixa.fecharCaixa();
+    }
+}
+```
+3. Teste TDD
+
+   ```java
+
+class ControleDeCaixa {
+    private double saldo;
+
+    public ControleDeCaixa() {
+        this.saldo = 0.0;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void aumentarSaldo(double valor) {
+        this.saldo += valor;
+    }
+
+    public boolean saidaSaldo(double valor) {
+        if (this.saldo < valor) {
+            System.out.println("Não é possível retirar " + valor + ", pois o saldo é de: " + this.saldo);
+            return false;
+        } else {
+            this.saldo -= valor;
+            return true;
+        }
+    }
+
+    public void exibirSaldo() {
+        System.out.println("Saldo atual: " + this.saldo);
+    }
+}
+
+public class TesteControleDeCaixa {
+    public static boolean testeSaldo() {
+        ControleDeCaixa caixaTeste = new ControleDeCaixa();
+        if (caixaTeste.getSaldo() == 0.0) {
+            System.out.println("Saldo passou!");
+            return true;
+        } else {
+            System.out.println("Saldo falhou!");
+            return false;
+        }
+    }
+
+    public static boolean testeAumentoSaldo() {
+        ControleDeCaixa caixaTeste = new ControleDeCaixa();
+        caixaTeste.aumentarSaldo(100.0);
+        if (caixaTeste.getSaldo() == 100.0) {
+            System.out.println("Aumento passou!");
+            return true;
+        } else {
+            System.out.println("Aumento falhou!");
+            return false;
+        }
+    }
+
+    public static boolean testeExibir() {
+        ControleDeCaixa caixaTeste = new ControleDeCaixa();
+        caixaTeste.exibirSaldo();
+        if (caixaTeste.getSaldo() >= 0.0) {
+            System.out.println("Saldo fechou positivo!");
+            return true;
+        } else {
+            System.out.println("Saldo fechou negativo!");
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        testeSaldo();
+        testeAumentoSaldo();
+        testeExibir();
+    }
+}
+```
