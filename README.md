@@ -155,7 +155,7 @@ public class Main {
    import org.junit.jupiter.api.Test;
    import static org.junit.jupiter.api.Assertions.*;
 
-class ControleDeCaixaTest {
+   class ControleDeCaixaTest {
 
     @Test
     void testeSaldoInicial() {
