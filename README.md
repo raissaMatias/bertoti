@@ -200,4 +200,8 @@ código ControleDeCaixa
 
 ![cod1](https://github.com/user-attachments/assets/06e9d60e-e2f9-43bb-b260-11ffe7ea39b9)
 
+código Menu
+
+![cod2](https://github.com/user-attachments/assets/bc2bfcc3-b3e1-41e2-8014-0e81be671d14)
+
 
