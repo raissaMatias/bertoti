@@ -152,7 +152,7 @@ public class Main {
 
 3. Teste TDD
 
-```java
+   ```java
    import org.junit.jupiter.api.Test;
    import static org.junit.jupiter.api.Assertions.*;
 
@@ -186,3 +186,64 @@ public class Main {
     }
 }
 ```
+4. CLASSE UML: A UML possui diversos diagramas que servem para representar artefatos de sistemas orientados a objetos.
+
+o sinal de + representa um atributo, que por sua vez armazena um estado de objeto e define as informções que o objeto mantém.
+
+o sinal de - representa um método, que são funções ou procedimento que definem seu comportamento
+
+Código Menu 
+
++-------------------------+
+|           Main           |
++-------------------------+
+| - scanner: Scanner      |
+| - controle: ControleDeCaixa |
++-------------------------+
+| + main(args: String[]): void |
++-------------------------+
+
++-------------------------+
+|   ControleDeCaixa       |
++-------------------------+
+| - saldo: double         |
+| - registro: List<String>|
++-------------------------+
+| + ControleDeCaixa()     |
+| + aumentarSaldo(valor: double): void |
+| + saidaSaldo(valor: double): boolean |
+| + exibirSaldo(): double |
+| + fecharCaixa(): double |
++-------------------------+
+
+
+CÓDIGO ControleDeCaixa
+
++-------------------------+
+|   ControleDeCaixa       |
++-------------------------+
+| - saldo: double         |
+| - registro: List<String>|
++-------------------------+
+| + ControleDeCaixa()     |
+| + aumentarSaldo(valor: double): void |
+| + saidaSaldo(valor: double): boolean |
+| + exibirSaldo(): double |
+| + fecharCaixa(): double |
+| + main(args: String[]): void |
++-------------------------+
+
+
+
+código teste TDD
++-------------------------+
+|   ControleDeCaixa       |
++-------------------------+
+| - saldo: double         |
++-------------------------+
+| + ControleDeCaixa()     |
+| + getSaldo(): double    |
+| + aumentarSaldo(valor: double): void |
+| + saidaSaldo(valor: double): boolean |
++-------------------------+
+ 
