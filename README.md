@@ -185,65 +185,14 @@ public class Main {
         assertEquals(50.0, caixaTeste.getSaldo(), "O saldo final deve ser 50.0 após a retirada válida");
     }
 }
+
 ```
+
 4. CLASSE UML: A UML possui diversos diagramas que servem para representar artefatos de sistemas orientados a objetos.
 
 o sinal de + representa um atributo, que por sua vez armazena um estado de objeto e define as informções que o objeto mantém.
 
 o sinal de - representa um método, que são funções ou procedimento que definem seu comportamento
 
-Código Menu 
+![image](https://github.com/user-attachments/assets/8153a18d-e7ea-4ba5-aae7-bd677d171674)
 
-+-------------------------+
-|           Main           |
-+-------------------------+
-| - scanner: Scanner      |
-| - controle: ControleDeCaixa |
-+-------------------------+
-| + main(args: String[]): void |
-+-------------------------+
-
-+-------------------------+
-|   ControleDeCaixa       |
-+-------------------------+
-| - saldo: double         |
-| - registro: List<String>|
-+-------------------------+
-| + ControleDeCaixa()     |
-| + aumentarSaldo(valor: double): void |
-| + saidaSaldo(valor: double): boolean |
-| + exibirSaldo(): double |
-| + fecharCaixa(): double |
-+-------------------------+
-
-
-CÓDIGO ControleDeCaixa
-
-+-------------------------+
-|   ControleDeCaixa       |
-+-------------------------+
-| - saldo: double         |
-| - registro: List<String>|
-+-------------------------+
-| + ControleDeCaixa()     |
-| + aumentarSaldo(valor: double): void |
-| + saidaSaldo(valor: double): boolean |
-| + exibirSaldo(): double |
-| + fecharCaixa(): double |
-| + main(args: String[]): void |
-+-------------------------+
-
-
-
-código teste TDD
-+-------------------------+
-|   ControleDeCaixa       |
-+-------------------------+
-| - saldo: double         |
-+-------------------------+
-| + ControleDeCaixa()     |
-| + getSaldo(): double    |
-| + aumentarSaldo(valor: double): void |
-| + saidaSaldo(valor: double): boolean |
-+-------------------------+
- 
