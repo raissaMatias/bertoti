@@ -193,16 +193,6 @@ o sinal de + representa um atributo, que por sua vez armazena um estado de objet
 
 o sinal de - representa um método, que são funções ou procedimento que definem seu comportamento
 
-código TDD
-
-![cod2](https://github.com/user-attachments/assets/e83a240e-59ba-4d7c-9641-1d92f83309e7)
-
-código ControleDeCaixa
-
-![cod1](https://github.com/user-attachments/assets/06e9d60e-e2f9-43bb-b260-11ffe7ea39b9)
-
-código Menu
-
-![cod2](https://github.com/user-attachments/assets/bc2bfcc3-b3e1-41e2-8014-0e81be671d14)
+![Captura de tela 2025-03-11 214027](https://github.com/user-attachments/assets/0c1ac0f5-51e0-4c0a-a5ba-fa643ac2651e)
 
 
