@@ -196,3 +196,7 @@ o sinal de - representa um método, que são funções ou procedimento que defin
 
 ![image](https://github.com/user-attachments/assets/8153a18d-e7ea-4ba5-aae7-bd677d171674)
 
+código ControleDeCaixa
+![cod1](https://github.com/user-attachments/assets/06e9d60e-e2f9-43bb-b260-11ffe7ea39b9)
+
+
