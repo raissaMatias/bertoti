@@ -152,7 +152,7 @@ public class Main {
 
 3. Teste TDD
 
-```java
+```
 
    import org.junit.jupiter.api.Test;
    import static org.junit.jupiter.api.Assertions.*;
@@ -187,6 +187,7 @@ public class Main {
     }
 }
 
+```
 ```
 
 4. CLASSE UML: A UML possui diversos diagramas que servem para representar artefatos de sistemas orientados a objetos.
