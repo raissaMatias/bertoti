@@ -48,7 +48,7 @@ Microsserviços
 1. Código Main (menu do caixa)
 
 ```java
-   import java.util.Scanner;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
