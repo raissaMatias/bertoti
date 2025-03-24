@@ -1,5 +1,4 @@
-# bertoti
-17/02/2025
+# 17/02/2025
 
 Resumo dos trechos do livro: Software Engineering at Google, Oreilly
 
@@ -42,9 +41,9 @@ Microsserviços
 ❌ Complexidade na comunicação entre serviços e necessidade de gerenciar deploys distribuídos.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-ATIVIDADE 21/02 
+# ATIVIDADE 21/02 
 
-CÓDIGO JAVA COM TDD 
+# meu código java com TDD 
 
 1. Código Main (menu do caixa)
 
@@ -92,7 +91,7 @@ public class Main {
 }
 ```
 
-2. Código Controle de Caixa
+# 2. Código Controle de Caixa
 
    ```java
    import java.util.ArrayList;
@@ -150,8 +149,9 @@ public class Main {
 }
 ```
 
-3. Teste TDD
+# 3. Teste TDD
 
+   ```java
    import org.junit.jupiter.api.Test;
    import static org.junit.jupiter.api.Assertions.*;
 
@@ -184,22 +184,22 @@ public class Main {
         assertEquals(50.0, caixaTeste.getSaldo(), "O saldo final deve ser 50.0 após a retirada válida");
     }
 }
-
 ```
 
-4. CLASSE UML: A UML possui diversos diagramas que servem para representar artefatos de sistemas orientados a objetos.
+# 4. CLASSE UML 
+A UML possui diversos diagramas que servem para representar artefatos de sistemas orientados a objetos.
 
 o sinal de + representa um atributo, que por sua vez armazena um estado de objeto e define as informções que o objeto mantém.
 
 o sinal de - representa um método, que são funções ou procedimento que definem seu comportamento
 
-código TDD
+# UML código TDD
 ![Captura de tela 2025-03-11 214027](https://github.com/user-attachments/assets/0c1ac0f5-51e0-4c0a-a5ba-fa643ac2651e)
 
-código ControledeCaixa
+# UML código ControledeCaixa
 ![Captura de tela 2025-03-11 212732](https://github.com/user-attachments/assets/869f80c8-c484-49d1-b183-8efa73581201)
 
-código Menu
+# UML código Menu
 ![menu](https://github.com/user-attachments/assets/186bf62e-eef9-4273-8e9d-adfd6bd07b0e)
 
-```
+
