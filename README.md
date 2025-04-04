@@ -41,13 +41,12 @@ Microsserviços
 ❌ Complexidade na comunicação entre serviços e necessidade de gerenciar deploys distribuídos.
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-![image](https://github.com/user-attachments/assets/385effd5-bbc6-4f7d-bf65-8bc912d424de)
 
 # ATIVIDADE 21/02 
 
 
 
-# 4. CLASSE UML 
+# Atividade - CLASSE UML 
 A UML possui diversos diagramas que servem para representar artefatos de sistemas orientados a objetos.
 
 o sinal de + representa um atributo, que por sua vez armazena um estado de objeto e define as informções que o objeto mantém.
