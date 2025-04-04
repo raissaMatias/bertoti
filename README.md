@@ -1,5 +1,7 @@
 # 17/02/2025
 
+![Diagrama de Arquitetura](./docs/diagrama-arquitetura.drawio.svg)
+
 Resumo dos trechos do livro: Software Engineering at Google, Oreilly
 
 1) Os engenheiros de software são profissionais que criam aplicações que serão usadas no cotidiano usando conhecimentos teóricos, assim como engenheiros de outros setores. Tais aplicações são "menos tangíveis", porém não menos intergradas ao nosso cotidiano. 
