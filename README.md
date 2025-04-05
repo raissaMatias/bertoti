@@ -148,4 +148,3 @@ o sinal de + representa um atributo, que por sua vez armazena um estado de objet
 
 o sinal de - representa um método, que são funções ou procedimento que definem seu comportamento
 
-
