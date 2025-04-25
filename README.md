@@ -44,7 +44,7 @@ Microsserviços
 
 # ATIVIDADE 21/02 
 
-# atividade individual 1 ao 6 (pasta)
+# atividade individual 1 ao 6 (pasta AtividadeIndividual)
 
 # Atividade 4 - CLASSE UML 
 Biblioteca possui uma relação com Livros pois possui uma lista de livros List<Livro>, um caso de associação fraca pois livros pode existir sem a bibliteca.
